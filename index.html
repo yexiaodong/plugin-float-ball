@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>首页</title>
+
+    <link rel="stylesheet" type="text/css" href="AppFiles/JsLib/swiper/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="AppFiles/JsLib/float-ball/float-ball.css">
+    <link rel="stylesheet" type="text/css" href="AppFiles/PagesStyle/app.css">
+    <script type="text/javascript" src="AppFiles/JsLib/angular.min.js"></script>
+</head>
+<body>
+    <!-- 页眉 -->
+    <header>
+        <div class="header-bar">
+            <img class="logo" src="AppFiles/Images/logo.png">
+            <img class="user" src="AppFiles/Images/user.png">
+        </div>
+    </header>
+    <!-- 运营位-轮播图 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="AppFiles/Images/banner1.jpg"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="AppFiles/Images/banner2.jpg"></a></div>
+        </div>
+        <!-- 如果需要分离器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- 功能区 -->
+    <div class="home-menu" ng-init="names=['预约单','医生','就诊人','我']">
+        <ul>
+            <li ng-repeat="name in names">
+                <a href="#"><img src="AppFiles/Images/icon_t.png">{{name}}</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 主打医院区 -->
+    <div class="hospital-list-vertical" ng-init="hospitalName=['东莞市人民医院东莞市人民医院东莞市人民医院','东莞市人民医院','东莞市厚街医院','东莞市虎门医院','东莞市石排镇中坑村卫生站']">
+        <ul id="js-hospital-ul">
+            <li ng-repeat="hName in hospitalName">
+                <a href="#">
+                    <img class="hospital-img" src="AppFiles/Images/hospital_default.png">
+                    <div class="ri">
+                        <h3>{{hName}}</h3>
+                        <span class="level">三甲</span>
+                        <p>
+                            <i class="icon-level"></i>三级甲等
+                        </p>
+                        <p>
+                            <i class="icon-type"></i>综合医院
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="tip">正在加载...</div>
+    </div>
+
+
+    <script type="text/javascript" src="AppFiles/JsLib/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="AppFiles/JsLib/swiper/swiper-3.3.1.min.js"></script>
+    <script type="text/javascript" src="AppFiles/JsLib/float-ball/float-ball.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //轮播图
+            var mySwiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                loop:true,
+                //autoplay: 3000,
+                paginationClickable:true
+            });
+
+            //滚动到底部
+            var generatedCount = 0;
+            $(window).scroll(function(){
+                var scrollTop = $(this).scrollTop();
+                var scrollHeight = $(document).height();
+                var windowHeight = $(this).height();
+                if(scrollTop + windowHeight == scrollHeight){
+                    console.log('已经到达底部');
+                    for (var i=0; i<3; i++) {
+                        $('#js-hospital-ul').append("<li><a href=\"#\"><img class=\"hospital-img\" src=\"AppFiles/Images/hospital_default.png\">"
+                                + "<div class=\"ri\"><h3>滑动加载" + (++generatedCount)
+                                + "</h3><span class=\"level\">三甲</span><p><i class=\"icon-level\"></i>三级甲等</p>"
+                                + "<p><i class=\"icon-type\"></i>综合医院</p></div></a></li>");
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

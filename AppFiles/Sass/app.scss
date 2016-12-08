@@ -1,0 +1,16 @@
+//导入-常用样式
+//icon：图标，放在第一的原因是方便维护（页面设计使用相对路径，而项目使用绝对路径）
+//color：颜色，变量
+//reset：重置默认的html样式
+//font：字体
+
+//layout:布局
+//ex：兼容
+//-----------------------------------------------
+@import "icon";
+@import 'color';
+@import "reset";
+@import 'font';
+@import 'btn';
+@import "layout";
+@import "ex";

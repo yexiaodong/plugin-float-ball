@@ -1,0 +1,19 @@
+//只有文字，没有边框、背景、轮廓
+//-----------------------------------------------
+.btn-none{
+  border: none;
+  background: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+//基本按钮
+//-----------------------------------------------
+.btn-default{
+  display: block;
+  height: 30px; line-height: 30px;
+  background-color: $color-blue;
+  color:$color-white;
+  border-radius:5px;
+  border:none;
+}

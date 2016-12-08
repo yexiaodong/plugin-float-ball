@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>搜索</title>
+    <link rel="stylesheet" type="text/css" href="AppFiles/JsLib/float-ball/float-ball.css">
+    <link rel="stylesheet" type="text/css" href="AppFiles/PagesStyle/app.css">
+    <script type="text/javascript" src="AppFiles/JsLib/angular.min.js"></script>
+
+</head>
+<body>
+<!-- 页眉 -->
+<header>
+    <div class="header-search">
+        <img src="AppFiles/Images/icon_input.png">
+        <i class="icon-search"></i>
+        <input class="input-search" type="text" name="search">
+        <button type="button">搜索</button>
+    </div>
+</header>
+<!-- 主打医院区 -->
+<div class="hospital-list-vertical" ng-init="hospitalName=['东莞市人民医院东莞市人民医院东莞市人民医院','东莞市人民医院','东莞市厚街医院','东莞市虎门医院','东莞市石排镇中坑村卫生站']">
+    <ul>
+        <li ng-repeat="hName in hospitalName">
+            <a href="#">
+                <img class="hospital-img" src="AppFiles/Images/hospital_default.png">
+                <div class="ri">
+                    <h3>{{hName}}</h3>
+                    <span class="level">三甲</span>
+                    <p>
+                        <i class="icon-level"></i>三级甲等
+                    </p>
+                    <p>
+                        <i class="icon-type"></i>综合医院
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="AppFiles/JsLib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="AppFiles/JsLib/float-ball/float-ball.js"></script>
+</body>
+</html>

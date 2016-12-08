@@ -1,0 +1,131 @@
+//变量
+//left-right-var：左右边距
+//top-bottom-var：上下边距
+//-----------------------------------------------
+$left-right-var:12px;
+$top-bottom-var:9px;
+
+//页眉区
+//-----------------------------------------------
+header{
+  background: $color-white;
+  padding:$top-bottom-var $left-right-var;
+  .header-bar {
+    .logo{
+      height: 23px;
+      width: 100px;
+    }
+    .user{
+      float:right;
+      height: 20px;
+      width: 21px;
+    }
+  }
+  //搜索
+  .header-search{
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+      height: 23px;
+    }
+    .icon-search{
+      top:4px;left: 2%;
+      transform: scale(0.8);
+    }
+    .input-search{
+      position: absolute;
+      top: 4px;left:10%;
+      width: 80%;
+      border: none;
+      background:none;
+      outline: none;
+    }
+    button{
+      position: absolute;
+      top:4px;right: 2%;
+      @extend .btn-none;
+    }
+  }
+}
+//运营区，轮播图
+//-----------------------------------------------
+.swiper-container{
+  img{
+    height: 130px;
+    width: 100%;
+  }
+}
+//功能区
+//-----------------------------------------------
+.home-menu{
+  li{
+    display: inline-block;
+    padding-bottom:11px;
+    width:25%;
+    background-color:$color-white;
+    text-align: center;
+    border-left:1px solid $color-grey;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    img{
+      display: block;
+      margin:0 auto;
+      width: 66px;
+      height: 60px;
+    }
+  }
+}
+//主打商品区：医院列表
+//-----------------------------------------------
+.hospital-list-vertical{
+  li{
+    padding:$top-bottom-var $left-right-var;
+    border-top:1px solid $color-grey;
+    font-size: 0px;
+    min-height: 75px;
+    .hospital-img{
+      width: 30%;
+      height: 30%;
+    }
+    .ri{
+      display: inline-block;
+      width: 67%;
+      padding-left:3%;
+      vertical-align: top;
+      font-size: 12px;
+      h3{
+        display: inline;
+        @extend .font-list-title;
+      }
+      .level{
+        @extend .font-border-blue;
+        margin-left: 5px;
+      }
+      p{
+        position: relative;
+        padding-left: 17px;
+      }
+    }
+  }
+}
+
+//描述页面，如：服务协议
+//-----------------------------------------------
+.protocol{
+  background: $color-white;
+  padding:$top-bottom-var $left-right-var;
+  h1{
+    @extend .font-protocol-title;
+    margin-bottom: 10px;
+  }
+  li,p{
+    text-indent:2em;
+  }
+  button{
+    width: 90%;
+    margin:5% auto;
+    @extend .btn-default;
+  }
+}
+

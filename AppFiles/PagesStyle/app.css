@@ -1,0 +1,192 @@
+@charset "UTF-8";
+.icon-level {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background: url(../Images/hos_level.png); }
+
+.icon-type {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background: url(../Images/hos_type.png); }
+
+.icon-search {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../Images/icon_search.png); }
+
+html,
+body,
+header,
+section,
+ul,
+ol,
+div,
+p,
+h1, h2, h3, h4, h5, h6, h7,
+a {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f7f7f7; }
+
+li {
+  list-style: none; }
+
+a {
+  color: #000000;
+  text-decoration: none; }
+  a:hover {
+    cursor: pointer; }
+
+h1 {
+  font-size: 34px;
+  font-weight: 100; }
+
+.font-base, .font-body, body, .font-header, .font-main-title, .font-main {
+  font-family: '微软雅黑 Regular', '微软雅黑';
+  font-weight: normal; }
+
+.font-body, body {
+  font-size: 12px;
+  color: #000000; }
+
+.font-list-title, .hospital-list-vertical li .ri h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000; }
+
+.font-border-blue, .hospital-list-vertical li .ri .level {
+  padding: 0px 3px;
+  color: #0085d0;
+  border: 1px solid #0085d0;
+  border-radius: 5px;
+  font-size: 12px; }
+
+.font-protocol-title, .protocol h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center; }
+
+.font-header {
+  font-size: 32px; }
+
+.font-main-title {
+  font-size: 28px; }
+
+.font-main {
+  font-size: 24px; }
+
+.btn-none, header .header-search button {
+  border: none;
+  background: none;
+  outline: none; }
+
+.btn-default, .protocol button {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  background-color: #0085d0;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: none; }
+
+header {
+  background: #FFFFFF;
+  padding: 9px 12px; }
+  header .header-bar .logo {
+    height: 23px;
+    width: 100px; }
+  header .header-bar .user {
+    float: right;
+    height: 20px;
+    width: 21px; }
+  header .header-search {
+    position: relative; }
+    header .header-search img {
+      display: block;
+      width: 100%;
+      height: 23px; }
+    header .header-search .icon-search {
+      top: 4px;
+      left: 2%;
+      transform: scale(0.8); }
+    header .header-search .input-search {
+      position: absolute;
+      top: 4px;
+      left: 10%;
+      width: 80%;
+      border: none;
+      background: none;
+      outline: none; }
+    header .header-search button {
+      position: absolute;
+      top: 4px;
+      right: 2%; }
+
+.swiper-container img {
+  height: 130px;
+  width: 100%; }
+
+.home-menu li {
+  display: inline-block;
+  padding-bottom: 11px;
+  width: 25%;
+  background-color: #FFFFFF;
+  text-align: center;
+  border-left: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .home-menu li img {
+    display: block;
+    margin: 0 auto;
+    width: 66px;
+    height: 60px; }
+
+.hospital-list-vertical li {
+  padding: 9px 12px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0px;
+  min-height: 75px; }
+  .hospital-list-vertical li .hospital-img {
+    width: 30%;
+    height: 30%; }
+  .hospital-list-vertical li .ri {
+    display: inline-block;
+    width: 67%;
+    padding-left: 3%;
+    vertical-align: top;
+    font-size: 12px; }
+    .hospital-list-vertical li .ri h3 {
+      display: inline; }
+    .hospital-list-vertical li .ri .level {
+      margin-left: 5px; }
+    .hospital-list-vertical li .ri p {
+      position: relative;
+      padding-left: 17px; }
+
+.protocol {
+  background: #FFFFFF;
+  padding: 9px 12px; }
+  .protocol h1 {
+    margin-bottom: 10px; }
+  .protocol li, .protocol p {
+    text-indent: 2em; }
+  .protocol button {
+    width: 90%;
+    margin: 5% auto; }
+
+.swiper-container {
+  z-index: 0; }
+
+/*# sourceMappingURL=app.css.map */

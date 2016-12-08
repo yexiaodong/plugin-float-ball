@@ -1,0 +1,83 @@
+//变量
+//left-right-var：左右边距
+//top-bottom-var：上下边距
+//-----------------------------------------------
+$left-right-var:16px;
+$top-bottom-var:12px;
+
+//页眉区
+//-----------------------------------------------
+header{
+  background: $color-white;
+  padding:$top-bottom-var $left-right-var;
+  .header-bar {
+    .logo{
+      height: 30px;
+      width: 135px;
+    }
+    .user{
+      float:right;
+      height: 27px;
+      width: 28px;
+    }
+  }
+}
+//运营区，轮播图
+//-----------------------------------------------
+.swiper-container{
+  img{
+    height: 175px;
+    width: 100%;
+  }
+}
+//功能区
+//-----------------------------------------------
+.home-menu{
+  li{
+    display: inline-block;
+    padding-bottom:15px;
+    width:25%;
+    background-color:$color-white;
+    text-align: center;
+    border-left:1px solid $color-grey;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    img{
+      display: block;
+      margin:0 auto;
+    }
+  }
+}
+//主打商品区
+.hospital-list-vertical{
+  li{
+    padding:$top-bottom-var $left-right-var;
+    border-top:1px solid $color-grey;
+    font-size: 0px;
+    min-height: 100px;
+    .hospital-img{
+      width: 30%;
+      height: 30%;
+    }
+    .ri{
+      display: inline-block;
+      width: 67%;
+      padding-left:3%;
+      vertical-align: top;
+      font-size: 16px;
+      h3{
+        display: inline;
+        @extend .font-list-title;
+      }
+      .level{
+        @extend .font-border-blue;
+        margin-left: 5px;
+      }
+      p{
+        position: relative;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+

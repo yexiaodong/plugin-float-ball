@@ -1,0 +1,57 @@
+//公共属性
+//-----------------------------------------------
+.font-base{
+  font-family: '微软雅黑 Regular', '微软雅黑';
+  font-weight: normal;
+}
+
+//默认字体
+//-----------------------------------------------
+.font-body{
+  @extend .font-base;
+  font-size: 12px;
+  color:$color-black;
+}
+//列表标题，医院列表
+//-----------------------------------------------
+.font-list-title{
+  font-size: 13px;
+  font-weight:500;
+  color:$color-black;
+}
+//带边框字体，蓝色
+//-----------------------------------------------
+.font-border-blue{
+  padding:0px 3px;
+  color: $color-blue;
+  border: 1px solid $color-blue;
+  border-radius: 5px;
+  font-size: 12px;
+}
+//详情页面标题 ，如：服务协议标题
+//-----------------------------------------------
+.font-protocol-title{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+//页眉字体
+//-----------------------------------------------
+.font-header{
+  @extend .font-base;
+  font-size: 32px;
+}
+//正文标题字体
+//-----------------------------------------------
+.font-main-title{
+  @extend .font-base;
+  font-size: 28px;
+}
+//正文字体
+//-----------------------------------------------
+.font-main{
+  @extend .font-base;
+  font-size: 24px;
+}
+
